@@ -1,12 +1,17 @@
 return {
   {
     "nvim-neorg/neorg",
-    lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
-    version = "v7.0.0", -- This is the important part!
     config = {
       load = {
+        ["core.summary"] = {},
         ["core.defaults"] = {},
         ["core.export"] = {},
+        ["core.ui.calendar"] = {},
+        ["core.journal"] = {
+          config = {
+            strategy = "flat",
+          },
+        },
         ["core.concealer"] = {
           config = {
             icons = {
@@ -23,9 +28,9 @@ return {
               },
               heading = {
                 icons = {
-                  " ",
-                  " ",
-                  " ",
+                  "",
+                  "",
+                  "",
                 },
               },
             },
@@ -33,9 +38,9 @@ return {
         },
         ["core.dirman"] = {
           config = {
-            default_workspace = "wiki",
+            default_workspace = "notes",
             workspaces = {
-              wiki = "~/wiki",
+              notes = "~/notes",
             },
           },
         },

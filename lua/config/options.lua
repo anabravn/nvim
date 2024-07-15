@@ -2,6 +2,7 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
+vim.cmd([[set nocursorline]])
 vim.o.relativenumber = false
 vim.cmd([[highlight link @neorg.links.file @neorg.links.location.heading.2]])
 
@@ -31,5 +32,3 @@ vim.api.nvim_set_keymap(
   ":lua require('telescope.builtin').live_grep({prompt_title='Find notes', search_dirs={'~/zk'}})<CR>",
   opts
 )
--- Search for the notes matching the current visual selection.
-vim.api.nvim_set_keymap("v", "<leader>zf", ":'<,'>ZkMatch<CR>", opts)

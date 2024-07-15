@@ -1,5 +1,6 @@
-vim.o.wrap = true
-vim.o.number = false
-vim.o.breakindent = true
-
-vim.cmd([[highlight link @neorg.links.file @neorg.links.location.generic]])
+vim.cmd([[set spell]])
+vim.cmd([[set spelllang=en,pt]])
+vim.cmd([[set nocursorline]])
+vim.cmd([[set wrap]])
+vim.cmd([[set linebreak]])
+vim.cmd([[set nonu]])
